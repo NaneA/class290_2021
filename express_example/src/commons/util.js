@@ -19,5 +19,10 @@ module.exports = {
                 resolve(data);
             });
         });
-    }
+    },
+    User_roles:{
+        admin: 'admin',
+        customer:'customer'
+    },
+    Max_number_of_failed_login :2
 }
