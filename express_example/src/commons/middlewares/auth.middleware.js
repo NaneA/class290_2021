@@ -18,7 +18,7 @@ const jwtMiddleware = async (req, res, next) => {
         req.user = user;
     } catch (err) {
         //console.log(err);
-        return next(new Forbidden('me'));
+        return next(new Forbidden());
     }
 
     next();
