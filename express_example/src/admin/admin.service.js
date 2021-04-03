@@ -10,7 +10,7 @@ class AdminService{
        let person = await User.findById(id).exec();
      
       
-        return  await person.updateOne({ islocked: false });
+        return  await person.update({ islocked: false, failed_num:0 });
         
    }
 
