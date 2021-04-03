@@ -10,7 +10,7 @@ const jwtMiddleware = async (req, res, next) => {
         const user = validateToken(token);
         const dbUser = await users.findOne(user.userId);
        
-        if(dbUser.islocked || dbUser.failed_num === Max_number_of_failed_login ){
+        if(dbUser.islocked ){
             
             return next(new Locked("The user is locked!"));
         }
